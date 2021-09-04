@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air</title>
+    <style>
+        body{
+            margin: 0; 
+            background-color: #FFFDF0;
+        }
+        a{
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        nav{
+            position: fixed;
+            left: 20px;
+            font-size: 70px;
+            z-index: 9;
+        }
+        #pJordan{
+            position: absolute;
+            top: 150px;
+            left: 50px;
+            width: 40%;
+            z-index: 1 !important;
+            line-height: 1.5;
+            opacity: 0;
+        }
+        #jordanDunk{
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            width: 50%;
+            z-index: 1 !important;
+        }
+        #travis1{
+            position: absolute;
+            top: 600px;
+            width: 50%;
+            z-index: 1 !important;
+        }
+        #jadedDiv{
+            position: absolute;
+            left: 800px;
+            top: 900px;
+        }
+        #tale{
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">AIR</a>
+    </nav>
+    <p id="pJordan">
+        After being selected third overall pick by the Chicago Bulls in 1984, 
+        Michael Jordan was signed to a five-year deal with Nike that was worth 
+        a reported $2.5 million, a hefty price tag at the time. A year later, 
+        Nike gave Jordan his own signature and the Nike Air Jordan was born.
+        This sneaker was so different from everything else on the market at the 
+        time that NBA commissioner David Stern fined Jordan $5,000 every time he             
+        wore them in a game. Nike gladly paid the fine on Jordan’s behalf because 
+        it was great marketing for the shoe. Jordan wore the red and black Air 
+        Jordan’s when he scored 63 points against Larry Bird’s Boston Celtics 
+        in the 1986 playoffs.
+    </p>
+    <img id="jordanDunk" src="jordan.jpg" alt="">
+    <img id="travis1" src="jordan1.jpg" alt="">
+    <div id="jadedDiv">
+        <h2>JADED</h2> 
+        <p>adjective</p>
+        <p id="tale">/ˈdʒeɪdɪd/</p>
+        <h4>bored or lacking enthusiasm, typically after having had too much of something.</h4>
+        <p>buying jordans are exciting the first time you do it, but you soon become jaded.</p>
+    </div>
+    <p></p>
+    <script>
+        var jordanDunk = document.getElementById("jordanDunk");
+        var pJordan = document.getElementById("pJordan");
+        
+        function slideImg(){
+            var slide = jordanDunk.animate([
+                {left: "50px"},
+                {left: "670px"}
+            ],
+            {
+                duration: 2000,
+                fill: "forwards"
+            });
+        };
+        slideImg(); 
+        
+        function visTxt() {
+            var viseTekst = pJordan.animate([
+                {opacity: 0},
+                {opacity: 1}
+            ], {
+                duration: 3000, 
+                fill: "forwards"
+            });
+        };
+        visTxt();
+    </script>
+</body>
+</html>
